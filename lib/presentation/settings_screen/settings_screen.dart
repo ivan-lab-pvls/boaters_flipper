@@ -84,12 +84,13 @@ class SettingsScreen extends StatelessWidget {
                     SizedBox(
                       height: 30.v,
                     ),
-                    InkWell(
-                        onTap: () {
-                          InAppReview.instance
-                              .openStoreListing(appStoreId: '6480523938');
-                        },
-                        child: CustomElevatedButton(text: 'Rate app')),
+                    CustomElevatedButton(
+                      text: 'Rate app',
+                      onPressed: () {
+                        InAppReview.instance
+                            .openStoreListing(appStoreId: '6480523938');
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -131,7 +132,7 @@ class SettingsScreen extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
                       builder: (BuildContext context) => const ReadTerms(
-                            dataFox: 'https://imgur.com/',
+                            dataFox: 'https://forms.gle/zn2rRjdWtFUxbaYQ8',
                           )),
                 );
               })
@@ -194,7 +195,7 @@ class ReadTerms extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 157, 255),
+        backgroundColor: Color.fromARGB(255, 248, 55, 45),
       ),
       body: SafeArea(
         bottom: false,
